@@ -8,6 +8,7 @@ let seattle = {
     avgCookiPerCustomer: 6.3,
     avgCookiSale: [],
     cusomersPerHour: [],
+    sum:0,
     getCustomersPerHour: function () {
         for (let i = 0; i < workingHour.length; i++) {
             this.cusomersPerHour[i] = randomCust(this.min, this.max);
@@ -15,8 +16,9 @@ let seattle = {
     },
     getAvgCookSale: function () {
         for (let i = 0; i < this.cusomersPerHour.length; i++) {
-            this.avgCookiSale[i] = this.cusomersPerHour[i] * this.avgCookiPerCustomer;
+            this.avgCookiSale[i] = Math.floor(this.cusomersPerHour[i]) * Math.floor(this.avgCookiPerCustomer);
             //console.log(seattle.avgCookiSale);
+            this.sum+= this.avgCookiSale[i];
         }
     },
     }
@@ -26,7 +28,7 @@ seattle.getCustomersPerHour();
 seattle.getAvgCookSale();
 console.log(seattle.cusomersPerHour);
 console.log(seattle.avgCookiSale);
-console.log(seattle.getSum);
+console.log(seattle.sum);
 
 function randomCust(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -39,6 +41,7 @@ let Tokyo = {
     avgCookiPerCustomer: 1.2,
     avgCookiSale: [],
     cusomersPerHour: [],
+    sum:0,
     getCustomersPerHour: function () {
         for (let i = 0; i < workingHour.length; i++) {
             this.cusomersPerHour[i] = randomCust(this.min, this.max);
@@ -46,8 +49,9 @@ let Tokyo = {
     },
     getAvgCookSale: function () {
         for (let i = 0; i < this.cusomersPerHour.length; i++) {
-            this.avgCookiSale[i] = this.cusomersPerHour[i] * this.avgCookiPerCustomer;
-
+            this.avgCookiSale[i] = Math.floor(this.cusomersPerHour[i]) * Math.floor(this.avgCookiPerCustomer);
+            //console.log(seattle.avgCookiSale);
+            this.sum+= this.avgCookiSale[i];
         }
     }
 
@@ -67,6 +71,7 @@ let Dubai = {
     avgCookiPerCustomer: 3.7,
     avgCookiSale: [],
     cusomersPerHour: [],
+    sum:0,
     getCustomersPerHour: function () {
         for (let i = 0; i < workingHour.length; i++) {
             this.cusomersPerHour[i] = randomCust(this.min, this.max);
@@ -74,8 +79,9 @@ let Dubai = {
     },
     getAvgCookSale: function () {
         for (let i = 0; i < this.cusomersPerHour.length; i++) {
-            this.avgCookiSale[i] = this.cusomersPerHour[i] * this.avgCookiPerCustomer;
-
+            this.avgCookiSale[i] = Math.floor(this.cusomersPerHour[i]) * Math.floor(this.avgCookiPerCustomer);
+            //console.log(seattle.avgCookiSale);
+            this.sum+= this.avgCookiSale[i];
         }
     }
 
@@ -89,6 +95,7 @@ let Paris = {
     avgCookiPerCustomer: 2.3,
     avgCookiSale: [],
     cusomersPerHour: [],
+    sum:0,
     getCustomersPerHour: function () {
         for (let i = 0; i < workingHour.length; i++) {
             this.cusomersPerHour[i] = randomCust(this.min, this.max);
@@ -96,7 +103,9 @@ let Paris = {
     },
     getAvgCookSale: function () {
         for (let i = 0; i < this.cusomersPerHour.length; i++) {
-            this.avgCookiSale[i] = this.cusomersPerHour[i] * this.avgCookiPerCustomer;
+            this.avgCookiSale[i] = Math.floor(this.cusomersPerHour[i]) * Math.floor(this.avgCookiPerCustomer);
+            //console.log(seattle.avgCookiSale);
+            this.sum+= this.avgCookiSale[i];
 
         }
     }
@@ -111,6 +120,7 @@ let Lima = {
     avgCookiPerCustomer: 4.6,
     avgCookiSale: [],
     cusomersPerHour: [],
+    sum:0,
     getCustomersPerHour: function () {
         for (let i = 0; i < workingHour.length; i++) {
             this.cusomersPerHour[i] = randomCust(this.min, this.max);
@@ -118,7 +128,9 @@ let Lima = {
     },
     getAvgCookSale: function () {
         for (let i = 0; i < this.cusomersPerHour.length; i++) {
-            this.avgCookiSale[i] = this.cusomersPerHour[i] * this.avgCookiPerCustomer;
+            this.avgCookiSale[i] = Math.floor(this.cusomersPerHour[i]) * Math.floor(this.avgCookiPerCustomer);
+            //console.log(seattle.avgCookiSale);
+            this.sum+= this.avgCookiSale[i];
             
         }
     }
@@ -147,6 +159,10 @@ for (let i =0 ;i<workingHour.length;i++) {
     console.log(listItem);
 
 }
+let totalcookies=document.createElement('li');
+unorderedList.appendChild(totalcookies);
+totalcookies.textContent='total' + ':' + seattle.sum;
+
 let title2=document.createElement('h2');
     parent.appendChild(title2);
     title2.textContent='Tokyo';
@@ -163,6 +179,10 @@ for (let i =0 ;i<workingHour.length;i++) {
     console.log(listItem2);
 
 }
+let totalcookies2=document.createElement('li');
+unorderedList1.appendChild(totalcookies2);
+totalcookies2.textContent='total' + ':' + Tokyo.sum;
+
 let title3=document.createElement('h2');
     parent.appendChild(title3);
     title3.textContent='Dubai';
@@ -179,6 +199,10 @@ for (let i =0 ;i<workingHour.length;i++) {
     console.log(listItem3);
 
 }
+let totalcookies3=document.createElement('li');
+unorderedList2.appendChild(totalcookies3);
+totalcookies3.textContent='total' + ':' + Dubai.sum;
+
 let title4=document.createElement('h2');
     parent.appendChild(title4);
     title4.textContent='Paris';
@@ -193,8 +217,11 @@ for (let i =0 ;i<workingHour.length;i++) {
     listItem4.textContent=workingHour[i] + ':' + Paris.avgCookiSale[i]+ 'Cookies';
     
     console.log(listItem4);
-
 }
+let totalcookies4=document.createElement('li');
+unorderedList3.appendChild(totalcookies4);
+totalcookies4.textContent='total' + ':' + Paris.sum;
+
 let title5=document.createElement('h2');
     parent.appendChild(title5);
     title5.textContent='Lima';
@@ -209,5 +236,7 @@ for (let i =0 ;i<workingHour.length;i++) {
     listItem5.textContent=workingHour[i] + ':' + Lima.avgCookiSale[i]+ 'Cookies';
     
     console.log(listItem5);
-
 }
+let totalcookies5=document.createElement('li');
+unorderedList4.appendChild(totalcookies5);
+totalcookies5.textContent='total' + ':' + Lima.sum;
