@@ -1,8 +1,5 @@
-* {
-    font-family: Arial, sans-serif;
-  }
-  
-  table {
+
+table {
     border: solid black 1px;
   }
   th {
@@ -12,3 +9,61 @@
   td{
     border: solid black 1px;
   }
+  body header{
+    background-color:rgb(244,67,54);
+}
+header a:hover { 
+    background-color:white;
+    color: black;
+ }
+body header a{
+    text-align: left;
+    background-color:rgb(240, 89, 78);
+    display: inline-block;
+    font-size: larger;
+    font-family:sans-serif;
+    text-decoration:none;
+    margin-left:0%;
+    height: 50px;
+    margin-top: 0%;
+    margin-bottom:30px;
+    padding:20px;
+    border: 10px rgb(94, 26, 21) ;
+    color: white;
+}
+main{
+  margin-top:none;
+  background-color: rgb(245, 233, 229);
+}
+h1{
+  text-align: center;
+  font-family:'Cookie', cursive;
+  padding-bottom: 50px;
+  font-size: 100px;
+}
+  img{
+    text-align: center;
+    margin-left: 60px;
+    width:  200px;
+    height: 150px;
+    object-fit:contain;
+}
+img:hover{
+  border-style: dotted;
+}
+
+a:hover{
+  background-color:white;
+    color: black;
+}
+h2{
+  font-family:'Indie Flower', cursive;
+  font-size: 35px; 
+}
+body{
+  background-image: url('img/Background-Bakery-Wallpaper.jpg');
+}
+footer{
+  padding-top:60px;
+  text-align: center;
+}

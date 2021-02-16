@@ -292,25 +292,26 @@ Lima.customersEachHour1();
 Lima.avgCookiSale1();
 console.log(Lima);
 
-Shops.prototype.render = function () {
-    let parent = document.createElement('parent');
 
-    let tableElement = document.createElement('table');
-    parent.appendChild(tableElement)
+let parent = document.createElement('parent');
+
+    let table = document.createElement('table');
+    parent.appendChild(table);
     console.log(parent);
-
+Shops.prototype.render = function () {
+    
     let headerRow = document.createElement('tr');
-    tableElement.appendChild(headerRow)
+    table.appendChild(headerRow);
     
     for (let i = 0; i < workingHour.length; i++) {
         const th1 = document.createElement('th1');
         th1.textContent = workingHour[i];
         headerRow.appendChild(th1);
     }
-    let dataRow = document.createElement('tr');
-    tableElement.appendChild(dataRow);
+    let secondRaw = document.createElement('tr');
+    table.appendChild(secondRaw);
        let td1 = document.createElement('td');
-        dataRow.appendChild(td1);
+        secondRaw.appendChild(td1);
         td1.textContent =this.locationName;
     console.log(td1);
 
