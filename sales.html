@@ -11,12 +11,39 @@
 </head>
 
 <body style="background-image:url('img/Background-Bakery-Wallpaper.jpg');">
- <h2 style="text-align: center;font-family:'Cookie', cursive;font-size: 70px;">
+    <a href="Index.html" style="padding: 30px;font-size: 30px;padding-bottom: 30px;">Home Page</a>
+    <h2 style="text-align: center;font-family:'Cookie', cursive;font-size: 70px;">
 Pat's Cookies Shop
  </h2>
  <h3 style="text-align: center;font-family:'Cookie';font-size: 40px;">Sales Chart</h3>
- <a href="Index.html" style="padding: 30px;font-size: 30px;padding-bottom: 30px;">Home Page</a>
+ 
 </header>
+
+<form action="" id="AddingShops" name="Add a Shop" >
+    <fieldset>
+        <label for="ShopLocation">Shop Location</label><br>
+
+ <input type="text" id = "ShopLocation">
+ <br>
+ <br>
+ <label for="MaximumCustomers">Maximum Customers</label><br>
+
+ <input type="text" id = "MaximumCustomers">
+ <br>
+ <br>
+ <label for="MinimumCustomers">Minimum Customers</label><br>
+ <input type="text" id = "MinimumCustomers">
+ <br>
+ <br>
+ <label for="AvgCookieSales">Avg. Cookie Sales</label><br>
+ <input type="text" id = "AvgCookieSales" required>
+ <br>
+ <br>
+
+<input type="submit" value="Add Shop" >
+    </fieldset>
+</form>
+
    <div id ="Parent"></div> 
 
 </body>

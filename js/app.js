@@ -359,7 +359,42 @@ let megatotal=0;
      footerRow.appendChild(finalth);
       finalth.textContent=megatotal;
 }
+let shopForm =document.getElementById('AddingShops');
 
+shopForm.addEventListener('submit', submitter);
+
+function submitter(event){
+event.preventDefault();
+console.log(event);
+
+let name= event.target.ShopLocation.value;
+console.log(name);
+
+let maxCu= event.target.MaximumCustomers.value;
+console.log(maxCu);
+
+let minCu= event.target.MinimumCustomers.value;
+console.log(minCu);
+
+let avgCo = event.target.AvgCookieSales.value;
+console.log(avgCo);
+
+let addNewShop= new Shops(name,maxCu, minCu, avgCo);
+ addNewShop.customersEachHour1();
+ addNewShop.avgCookiSale1();
+ addNewShop.render();
+
+ let container =document.getElementById(parent);
+
+ container.textContent='';
+
+for (let i = 0; i < shop.length; i++) {
+   shop[i].customersEachHour1();
+   shop[i].avgCookiSale1();
+   shop[i].render();
+}
+
+}
 makeHeader();
 for (let i = 0; i < shop.length; i++) {
     shop[i].customersEachHour1();
@@ -367,4 +402,8 @@ for (let i = 0; i < shop.length; i++) {
     shop[i].render();
 }
 makeFooter();
-    
+
+
+
+
+
