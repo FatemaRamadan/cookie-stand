@@ -1,12 +1,21 @@
 
 table {
+  background-color:thistle;
+  opacity:90%;
     border: solid black 1px;
+    
   }
   th {
+    padding: 20px;
+text-align: center;
+    background-color: rgb(238, 54, 63);
+    color:white;
+
     border: solid black 1px;
   }
-  
+
   td{
+    padding:10px;
     border: solid black 1px;
   }
   body header{
