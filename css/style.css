@@ -20,13 +20,14 @@ table {
     padding: 10px;
     text-align: center;
     background-color: rgb(255, 180, 184);
-    color:rgb(133, 132, 132);
+    color:rgb(109, 43, 43);
     border:ridge;
   }
 
   td{
-  
+  font-family: sans-serif;
     border: solid black 1px;
+    color: crimson;
   }
   body header{
     background-color:rgb(255, 167, 162);
